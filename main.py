@@ -30,8 +30,8 @@ async def gemini_query(key: str = None, text: str = None):
         # Configurar Gemini con la API key
         genai.configure(api_key=key)
         
-        # Usar el modelo Gemini Pro
-        model = genai.GenerativeModel('gemini-pro')
+        # Usar el modelo Gemini 2.5 Flash-Lite
+        model = genai.GenerativeModel('gemini-2.5-flash-lite')
         
         # Generar respuesta
         response = model.generate_content(text)
