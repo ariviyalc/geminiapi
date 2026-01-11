@@ -8,9 +8,9 @@ text  ✅ Yes  Prompt    text
 
 ## Example Request
 Copy code
-
-https://gemini-api-ashen-ten.vercel.app/gemini?key=YOUR_KEY&text=Hello Gemini
-
+```
+https://gemini-api-ashen-ten.vercel.app/gemini?key=YOUR_KEY&text=Hello%20Gemini
+```
 ## Example Response
 Copy code
 ```Json
