@@ -8,7 +8,7 @@ app = FastAPI()
 async def root():
     return {
         "status": "online",
-        "message": "API de Gemini funcionando",
+        "message": "Gemini API is working",
         "developer": "El Impaciente",
         "endpoint": "/gemini?key=YOUR_KEY&text=YOUR_QUERY"
     }
@@ -21,7 +21,7 @@ async def gemini_query(key: str = None, text: str = None):
             content={
                 "status_code": 400,
                 "developer": "El Impaciente",
-                "message": "Se requieren los parámetros key y text"
+                "message": "The parameters key and text are required"
             },
             status_code=400
         )
