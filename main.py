@@ -39,7 +39,6 @@ async def gemini_query(key: str = None, text: str = None):
         return JSONResponse(
             content={
                 "status_code": 200,
-                "developer": "El Impaciente",
                 "message": response.text
             },
             status_code=200
@@ -49,7 +48,6 @@ async def gemini_query(key: str = None, text: str = None):
         return JSONResponse(
             content={
                 "status_code": 400,
-                "developer": "El Impaciente",
                 "message": f"Error: {str(e)}"
             },
             status_code=400
