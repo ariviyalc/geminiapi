@@ -9,7 +9,7 @@ async def root():
     return {
         "status": "online",
         "message": "Gemini API is working",
-        "developer": "El Impaciente",
+        "developer": "https://pro_xbots.t.me",
         "endpoint": "/gemini?key=YOUR_KEY&text=YOUR_QUERY"
     }
 
