@@ -15,7 +15,7 @@ async def root():
 
 @app.get("/gemini")
 async def gemini_query(key: str = None, text: str = None):
-    # Validar que ambos parámetros estén presentes
+    # Validate that both parameters are provided
     if not key or not text:
         return JSONResponse(
             content={
@@ -24,17 +24,17 @@ async def gemini_query(key: str = None, text: str = None):
             },
             status_code=400
         )
-    
+
     try:
-        # Configurar Gemini con la API key
+        # Configure Gemini with the API key
         genai.configure(api_key=key)
-        
-        # Usar el modelo Gemini 2.5 Flash-Lite
-        model = genai.GenerativeModel('gemini-2.5-flash-lite')
-        
-        # Generar respuesta
+
+        # Use the Gemini 2.5 Flash-Lite model
+        model = genai.GenerativeModel("gemini-2.5-flash-lite")
+
+        # Generate response
         response = model.generate_content(text)
-        
+
         return JSONResponse(
             content={
                 "status_code": 200,
@@ -42,7 +42,7 @@ async def gemini_query(key: str = None, text: str = None):
             },
             status_code=200
         )
-        
+
     except Exception as e:
         return JSONResponse(
             content={
